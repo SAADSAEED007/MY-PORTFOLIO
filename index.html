@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="briefcase.png" type="image/x-icon"> <!-- Favicon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+    <style>
+        /* Add this CSS to your existing style.css or in a <style> tag within <head> */
+        .typing-text {
+            font-size: 1.5rem; /* Adjust size as needed */
+            color: #333; /* Change to your preferred color */
+            border-right: 2px solid; /* Cursor effect */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide text overflow */
+            animation: blink 0.7s infinite; /* Cursor blinking effect */
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">CODEWITHSID</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="IMG-20241016-WA0071.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>SAAD</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>"I'm a passionate front-end developer with a keen eye for design and a dedication to creating responsive, user-friendly websites. I specialize in translating complex ideas into visually appealing and intuitive interfaces. With expertise in HTML, CSS, and JavaScript, I strive to bridge the gap between design and functionality, ensuring seamless user experiences across all devices. Whether it's crafting modern websites or refining existing ones, I take pride in delivering high-quality, efficient code that brings digital visions to life."
+            </p>
+            <div class="social-icons">
+                <a href="" aria-label="Instagram Profile" role="img"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/SAADSAEED007" aria-label="GitHub Profile" role="img"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/923142990250?text=Hello! I would like to connect." aria-label="WhatsApp" role="img"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/saad._saeed007/" aria-label="Instagram Profile" role="img"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="https://wa.me/923142990250?text=Hello! I would like to connect." class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Services</h2>
+        <div class="service-item">
+            <h3>Web Development</h3>
+            <p>Creating responsive and user-friendly websites tailored to your needs.</p>
+        </div>
+        <div class="service-item">
+            <h3>Frontend Development</h3>
+            <p>Build dynamic web applications using modern frontend technologies.</p>
+        </div>
+        <div class="service-item">
+            <h3>Website Maintenance</h3>
+            <p>Provide support and updates for website security and performance.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Institution:</h3>
+            <p>Adamjee Govt. Science College</p>
+            <h3>Degree:</h3>
+            <p>F.S.C. in Computer Science</p>
+            <h3>Percentage:</h3>
+            <p>82.36%</p>
+            <h3>Year:</h3>
+            <p>2024</p>
+        </div>
+        <div class="education-item">
+            <h3>Institution:</h3>
+            <p>Oxford Islamic Scientific School</p>
+            <h3>Degree:</h3>
+            <p>S.S.C.</p>
+            <h3>Percentage:</h3>
+            <p>93.26%</p>
+            <h3>Year:</h3>
+            <p>2022</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skill-item">
+            <h3>Programming Languages</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skill-item">
+            <h3>Web Development Tools</h3>
+            <p>Git, Visual Studio Code</p>
+        </div>
+        <div class="skill-item">
+            <h3>Software Proficiency</h3>
+            <p>Microsoft Word</p>
+        </div>
+        <div class="skill-item">
+            <h3>Soft Skills</h3>
+            <p>Problem-solving, Time management, Quick learner</p>
+        </div>
+        <div class="skill-item">
+            <h3>Typing Speed</h3>
+            <p>60+ WPM</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to get in touch, feel free to contact me through the form below or via the provided contact information.</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> saadsaeedforpc456123@gmail.com</p>
+            <p><strong>Phone:</strong> +92 3142990250</p>
+        </div>
+        <form action="your_form_processing_script.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+
+            // Typewriter effect for the "I'm a" text
+            const typingText = document.querySelector(".typing-text span");
+            const roles = ["Web Developer", "Front-End Developer", "Web Maintainer"];
+            let roleIndex = 0;
+            let charIndex = 0;
+            let currentRole = "";
+
+            function type() {
+                if (charIndex < roles[roleIndex].length) {
+                    currentRole += roles[roleIndex].charAt(charIndex);
+                    typingText.textContent = currentRole;
+                    charIndex++;
+                    setTimeout(type, 150); // Typing speed
+                } else {
+                    setTimeout(erase, 2000); // Time before erasing
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    currentRole = currentRole.slice(0, -1);
+                    typingText.textContent = currentRole;
+                    charIndex--;
+                    setTimeout(erase, 100); // Erasing speed
+                } else {
+                    roleIndex = (roleIndex + 1) % roles.length; // Cycle through roles
+                    setTimeout(type, 500); // Time before typing next role
+                }
+            }
+
+            // Start typing effect
+            type();
+        });
+    </script>
+</body>
+
+</html>
